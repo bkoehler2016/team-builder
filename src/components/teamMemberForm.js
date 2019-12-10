@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
 const MemberForm = props => {
   const setTeam = props.setTeam;
@@ -18,7 +19,7 @@ const MemberForm = props => {
 
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="name">Name:</label>
+      <Label htmlFor="name">Name:</Label>
       <input
         type="name"
         name="name"
@@ -26,7 +27,7 @@ const MemberForm = props => {
         value={person.name}
         onChange={eventHandler}
       />
-      <label htmlFor="role">Role: </label>
+      <Label htmlFor="role">Role: </Label>
       <input
         type="text"
         name="role"
@@ -35,7 +36,7 @@ const MemberForm = props => {
         onChange={eventHandler}
       />
 
-      <label htmlFor="email">Email: </label>
+      <Label htmlFor="email">Email: </Label>
       <input
         type="email"
         name="email"
@@ -43,7 +44,7 @@ const MemberForm = props => {
         input={person.email}
         onChange={eventHandler}
       />
-      <button type="submit">Add Team Member</button>
+      <Button type="submit">Add Team Member</Button>
     </form>
   );
 };

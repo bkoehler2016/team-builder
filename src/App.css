@@ -1,3 +1,9 @@
 .App {
     text-align: center;
 }
+
+.Member {
+    border: 3px dashed steelblue;
+    margin: 20px auto;
+    width: 30%;
+}
