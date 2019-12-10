@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Members from "./components/Members";
-import teamMemberForm from "./components/teamMemberForm";
+import MemberForm from "./components/teamMemberForm";
 import "./App.css";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
   ]);
   return (
     <div className="App">
-      <h1>Team Builder Form></h1>
-      <teamMemberForm setTeam={setTeam} />
+      <h1>Team Builder Form</h1>
+      <MemberForm setTeam={setTeam} />
       {team.map(person => (
         <Members key={person.name} person={person} />
       ))}

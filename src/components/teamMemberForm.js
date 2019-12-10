@@ -1,58 +1,51 @@
 import React, { useState } from "react";
 
-const teamMemberForm = ({ addNewTeamMember }) => {
-  const [member, setMember] = useState({
-    id: "",
-    name: "",
-    role: "",
-    email: "",
-  });
+const MemberForm = props => {
+  const setTeam = props.setTeam;
+  const [person, setPerson] = useState({ name: "", role: "", email: "" });
 
-  const handleChanges = event => {
-    console.log("event", event.target.value);
-    setMember({ ...member, [event.target.name]: event.target.value });
+  const eventHandler = event => {
+    setPerson({ ...person, [event.target.name]: event.target.value });
   };
 
-  const submitForm = event => {
+  const submitHandler = event => {
     event.preventDefault();
-    addNewTeamMember(member);
-
-    setMember({ name: "", role: "", email: "" });
+    setTeam(team => [...team, person]);
+    setPerson({ name: "", role: "", email: "" });
   };
+
+  console.log(props);
+
   return (
-    <form onSubmit={submitForm}>
-      <label htmlFor="name">Name</label>
+    <form onSubmit={submitHandler}>
+      <label htmlFor="name">Name:</label>
       <input
-        required="true"
-        id="name"
-        type="text"
+        type="name"
         name="name"
-        placeholder="Enter your Name"
-        onChange={handleChanges}
-        value={member.name}
+        placeholder="name"
+        value={person.name}
+        onChange={eventHandler}
       />
-      <label htmlFor="role">Role</label>
+      <label htmlFor="role">Role: </label>
       <input
-        required="true"
-        id="role"
         type="text"
         name="role"
-        placeholder="Enter your Role"
-        onChange={handleChanges}
-        value={member.role}
+        placeholder="role"
+        value={person.role}
+        onChange={eventHandler}
       />
-      <label htmlFor="email">Email</label>
+
+      <label htmlFor="email">Email: </label>
       <input
-        required="true"
-        id="email"
         type="email"
         name="email"
-        placeholder="Enter your Email"
-        onChange={handleChanges}
-        value={member.email}
+        placeholder="email"
+        input={person.email}
+        onChange={eventHandler}
       />
+      <button type="submit">Add Team Member</button>
     </form>
   );
 };
 
-export default teamMemberForm;
+export default MemberForm;

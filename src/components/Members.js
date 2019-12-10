@@ -1,13 +1,13 @@
 import React from "react";
 
 const Members = props => {
+  const person = props.person;
+
   return (
-    <div className="member-list">
-      <div className="member" key={Members.id}>
-        <h2>{member.name}</h2>
-        <h3>{member.role}</h3>
-        <h4>{member.email}</h4>
-      </div>
+    <div className="Member">
+      <h2>{person.name}</h2>
+      <h3>{person.role}</h3>
+      <p>{person.email}</p>
     </div>
   );
 };
