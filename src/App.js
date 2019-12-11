@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [team, setTeam] = useState([
     { name: "Ben", role: "Student", email: "ben@lambda.com" },
-    { name: "Adam", role: "Dog", email: "adam@lambda.com" },
+    { name: "Julie", role: "Team Lead", email: "juile@lambda.com" },
   ]);
   return (
     <div className="App">
