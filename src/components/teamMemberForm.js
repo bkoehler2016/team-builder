@@ -20,7 +20,9 @@ const MemberForm = props => {
   return (
     <Form onSubmit={submitHandler}>
       <FormGroup row>
-        <Label for="name">Name:</Label>
+        <Label for="name" sm={2}>
+          Name:
+        </Label>
         <Col sm={10}>
           <Input
             required="true"
@@ -34,7 +36,9 @@ const MemberForm = props => {
       </FormGroup>
 
       <FormGroup row>
-        <Label for="role">Role: </Label>
+        <Label for="role" sm={2}>
+          Role:{" "}
+        </Label>
         <Col sm={10}>
           <Input
             required="true"
@@ -47,7 +51,9 @@ const MemberForm = props => {
         </Col>
       </FormGroup>
       <FormGroup row>
-        <Label for="email">Email: </Label>
+        <Label for="email" sm={2}>
+          Email:{" "}
+        </Label>
         <Col sm={10}>
           <Input
             required="true"
