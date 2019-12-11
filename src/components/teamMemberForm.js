@@ -64,9 +64,10 @@ const MemberForm = props => {
             onChange={eventHandler}
           />
         </Col>
+        <Button color="primary" type="submit">
+          Add Team Member
+        </Button>
       </FormGroup>
-
-      <Button type="submit">Add Team Member</Button>
     </Form>
   );
 };

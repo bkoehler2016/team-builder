@@ -1,15 +1,20 @@
 .App {
     text-align: center;
+    background-color: lightgray;
 
 }
 
 .Member {
-    border: 3px dashed crimson;
-    background-color: lightblue;
+    border: 3px dashed black;
+    background-color: #3fc5f0;
     margin: 20px auto;
     width: 30%;
 }
 
 Button {
     margin-top: 10px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    background-color: #0d546b;
+    color: #f5f8f8;
 }
